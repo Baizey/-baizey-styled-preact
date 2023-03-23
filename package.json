@@ -1,6 +1,6 @@
 {
   "name": "@baizey/styled-preact",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "styled-components but for preact",
   "main": "lib/index.js",
   "directories": {
