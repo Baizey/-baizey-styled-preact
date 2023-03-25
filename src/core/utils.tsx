@@ -29,7 +29,9 @@ export const css = (parts: TemplateStringsArray, ...args: any) => {
     return stringBuilder
 }
 
-export const wrapCssInClass = (name: string | ClassName, content: string) => `.${name}{${content}}`
+export const wrapCssInClass = (name: string | ClassName, content: string) => `.${name} {
+    ${content}
+}`
 
 export const mergeStyling: (higherPriority: string | undefined, lowerPriority?: string) => string | undefined =
     (lowerPriority, higherPriority) => {
