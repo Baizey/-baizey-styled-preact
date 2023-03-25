@@ -3,7 +3,10 @@
   "version": "1.2.1",
   "description": "styled-components but for preact",
   "main": "lib/index.js",
-  "repository": "https://github.com/Baizey/-baizey-styled-preact",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baizey/-baizey-styled-preact"
+  },
   "directories": {
     "lib": "lib",
     "test": "test"
