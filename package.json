@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "styled-components but for preact",
   "main": "lib/index.js",
+  "repository": "https://github.com/Baizey/-baizey-styled-preact",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -12,7 +13,7 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "@types/node": "^18.15.6",
+    "@types/node": "^18.15.9",
     "@types/uuid": "^9.0.1",
     "@types/jest": "^29.5.0",
     "preact": "^10.13.1",
