@@ -37,5 +37,5 @@ export const mergeStyling: (higherPriority: string | undefined, lowerPriority?: 
     (lowerPriority, higherPriority) => {
         if (!higherPriority) return lowerPriority
         if (!lowerPriority) return higherPriority
-        return `${lowerPriority ?? ''};\n${higherPriority ?? ''}`
+        return `${lowerPriority}\n${higherPriority}`
     };
