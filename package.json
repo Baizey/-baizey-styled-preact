@@ -1,6 +1,6 @@
 {
   "name": "@baizey/styled-preact",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "description": "styled-components but for preact",
   "main": "lib/index.js",
   "repository": {
