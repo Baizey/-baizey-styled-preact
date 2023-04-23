@@ -9,7 +9,7 @@ export function Label({
                           ...props
                       }: ElementProps & React.HTMLAttributes<HTMLLabelElement>) {
     const name = classname();
-    return <label {...props} className={`${className},${name}`}>
+    return <label {...props} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.label))}</style>
     </label>;

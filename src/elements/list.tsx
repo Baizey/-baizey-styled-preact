@@ -9,7 +9,7 @@ export function List({
                          ...props
                      }: ElementProps & React.HTMLAttributes<HTMLUListElement>) {
     const name = classname();
-    return <ul {...props} className={`${className},${name}`}>
+    return <ul {...props} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.list))}</style>
     </ul>;
@@ -22,7 +22,7 @@ export function ListItem({
                              ...props
                          }: ElementProps & React.HTMLAttributes<HTMLLIElement>) {
     const name = classname()
-    return <li {...props} className={`${className},${name}`}>
+    return <li {...props} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.listItem))}</style>
     </li>;

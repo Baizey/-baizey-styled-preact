@@ -10,7 +10,7 @@ export function Button({
                            ...props
                        }: ElementProps & React.HTMLAttributes<HTMLButtonElement>) {
     const name = classname();
-    return <button {...props} type={type} className={`${className},${name}`}>
+    return <button {...props} type={type} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.button))}</style>
     </button>;

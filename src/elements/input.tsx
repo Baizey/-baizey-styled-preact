@@ -11,7 +11,7 @@ export function Input({
                           ...props
                       }: ElementProps & React.HTMLAttributes<HTMLInputElement>) {
     const name = classname()
-    return <input{...props} type={type} className={`${className},${name}`}>
+    return <input{...props} type={type} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.input))}</style>
     </input>;

@@ -9,7 +9,7 @@ export function Span({
                          ...props
                      }: ElementProps & React.HTMLAttributes<HTMLSpanElement>) {
     const name = classname();
-    return <span {...props} className={`${className},${name}`}>
+    return <span {...props} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.span))}</style>
     </span>;

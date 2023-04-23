@@ -9,7 +9,7 @@ export function Link({
                          ...props
                      }: ElementProps & React.HTMLAttributes<HTMLAnchorElement>) {
     const name = classname();
-    return <a {...props} className={`${className},${name}`}>
+    return <a {...props} className={`${name}`}>
         {children}
         <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.link))}</style>
     </a>;
