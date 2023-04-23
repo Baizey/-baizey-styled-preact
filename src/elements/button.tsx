@@ -12,6 +12,6 @@ export function Button({
     const name = classname();
     return <button {...props} type={type} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.button))}
+        <style>{wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.button))}</style>
     </button>;
 }

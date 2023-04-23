@@ -13,6 +13,6 @@ export function Input({
     const name = classname()
     return <input{...props} type={type} className={`${className},${name}`}>
         {children}
-        {styling && wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.input))}
+        <style>{wrapCssInClass(`${name}[type="${type}"]`, mergeStyling(styling, StyledTheme.input))}</style>
     </input>;
 }
