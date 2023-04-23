@@ -11,6 +11,6 @@ export function Span({
     const name = classname();
     return <span {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.span))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.span))}</style>
     </span>;
 }

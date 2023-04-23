@@ -11,7 +11,7 @@ export function Header1({
     const name = classname();
     return <h1 {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
     </h1>;
 }
 
@@ -24,7 +24,7 @@ export function Header2({
     const name = classname();
     return <h2 {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
     </h2>;
 }
 
@@ -37,6 +37,6 @@ export const Header3 = ({
     const name = classname();
     return <h3 {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
     </h3>;
 }

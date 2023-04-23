@@ -11,6 +11,6 @@ export function Label({
     const name = classname();
     return <label {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.label))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.label))}</style>
     </label>;
 }

@@ -11,7 +11,7 @@ export function List({
     const name = classname();
     return <ul {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.list))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.list))}</style>
     </ul>;
 }
 
@@ -24,6 +24,6 @@ export function ListItem({
     const name = classname()
     return <li {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.listItem))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.listItem))}</style>
     </li>;
 }

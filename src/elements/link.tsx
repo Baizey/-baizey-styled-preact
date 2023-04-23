@@ -11,6 +11,6 @@ export function Link({
     const name = classname();
     return <a {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.link))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.link))}</style>
     </a>;
 }

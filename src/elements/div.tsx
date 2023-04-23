@@ -6,6 +6,6 @@ export function Div({children, className, styling, ...props}: ElementProps & Rea
     const name = classname();
     return <div {...props} className={`${className},${name}`}>
         {children}
-        {wrapCssInClass(name, mergeStyling(styling, StyledTheme.div))}
+        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.div))}</style>
     </div>;
 }
