@@ -36,9 +36,8 @@ export const wrapCssInClass = (name: string | ClassName, content: string) =>
 }`
         : ''
 
-export const mergeStyling: (higherPriority: string | undefined, lowerPriority?: string) => string | undefined =
-    (higherPriority, lowerPriority) => {
-        if (!higherPriority) return lowerPriority
-        if (!lowerPriority) return higherPriority
-        return `${lowerPriority}\n${higherPriority}`
-    };
+export const mergeStyling = (higherPriority: string | undefined, lowerPriority?: string): string | undefined => {
+    if (!higherPriority) return lowerPriority
+    if (!lowerPriority) return higherPriority
+    return `${lowerPriority}\n${higherPriority}`
+};
