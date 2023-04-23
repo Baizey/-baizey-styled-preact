@@ -30,12 +30,12 @@ export const css = (parts: TemplateStringsArray, ...args: any) => {
 }
 
 export const wrapCssInClass = (name: string | ClassName, content: string) => `.${name} {
-    ${content}
+    ${content ?? ''}
 }`
 
 export const mergeStyling: (higherPriority: string | undefined, lowerPriority?: string) => string | undefined =
     (lowerPriority, higherPriority) => {
         if (!higherPriority) return lowerPriority
         if (!lowerPriority) return higherPriority
-        return `${lowerPriority};\n${higherPriority}`
+        return `${lowerPriority ?? ''};\n${higherPriority ?? ''}`
     };
