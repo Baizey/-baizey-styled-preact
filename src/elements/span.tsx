@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {classname, mergeStyling, SpanProps, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -7,7 +7,7 @@ export function Span({
                          className,
                          styling,
                          ...props
-                     }: ElementProps & React.HTMLAttributes<HTMLSpanElement>) {
+                     }: SpanProps) {
     const name = classname();
     return <span {...props} className={`${name}`}>
         {children}

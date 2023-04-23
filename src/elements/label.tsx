@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {classname, LabelProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -7,7 +7,7 @@ export function Label({
                           className,
                           styling,
                           ...props
-                      }: ElementProps & React.HTMLAttributes<HTMLLabelElement>) {
+                      }: LabelProps) {
     const name = classname();
     return <label {...props} className={`${name}`}>
         {children}

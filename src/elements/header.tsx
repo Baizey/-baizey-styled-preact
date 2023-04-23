@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {classname, HeaderProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -7,7 +7,7 @@ export function Header1({
                             className,
                             styling,
                             ...props
-                        }: ElementProps & React.HTMLAttributes<HTMLHeadingElement>) {
+                        }: HeaderProps) {
     const name = classname();
     return <h1 {...props} className={`${name}`}>
         {children}
@@ -20,7 +20,7 @@ export function Header2({
                             className,
                             styling,
                             ...props
-                        }: ElementProps & React.HTMLAttributes<HTMLHeadingElement>) {
+                        }: HeaderProps) {
     const name = classname();
     return <h2 {...props} className={`${name}`}>
         {children}
@@ -33,7 +33,7 @@ export const Header3 = ({
                             className,
                             styling,
                             ...props
-                        }: ElementProps & React.HTMLAttributes<HTMLHeadingElement>) => {
+                        }: HeaderProps) => {
     const name = classname();
     return <h3 {...props} className={`${name}`}>
         {children}

@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {classname, ListItemProps, ListProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -7,7 +7,7 @@ export function List({
                          className,
                          styling,
                          ...props
-                     }: ElementProps & React.HTMLAttributes<HTMLUListElement>) {
+                     }: ListProps) {
     const name = classname();
     return <ul {...props} className={`${name}`}>
         {children}
@@ -20,7 +20,7 @@ export function ListItem({
                              className,
                              styling,
                              ...props
-                         }: ElementProps & React.HTMLAttributes<HTMLLIElement>) {
+                         }: ListItemProps) {
     const name = classname()
     return <li {...props} className={`${name}`}>
         {children}

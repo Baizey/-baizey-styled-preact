@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {classname, LinkProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -7,7 +7,7 @@ export function Link({
                          className,
                          styling,
                          ...props
-                     }: ElementProps & React.HTMLAttributes<HTMLAnchorElement>) {
+                     }: LinkProps) {
     const name = classname();
     return <a {...props} className={`${name}`}>
         {children}
