@@ -1,4 +1,4 @@
-import {classname, ElementProps, mergeStyling, wrapCssInClass} from "../core";
+import {ButtonProps, classname, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
 
@@ -8,7 +8,7 @@ export function Button({
                            className,
                            styling,
                            ...props
-                       }: ElementProps & React.HTMLAttributes<HTMLButtonElement>) {
+                       }: ButtonProps) {
     const name = classname();
     return <button {...props} type={type} className={`${name}`}>
         {children}
