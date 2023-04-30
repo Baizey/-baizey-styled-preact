@@ -4,6 +4,5 @@ import postcss from "postcss-js";
 import autoprefixer = require("autoprefixer");
 
 const handler = postcss.sync([autoprefixer])
-export const Style = ({css, children, ...props}: StyleProps) => {
-    return <style {...props}>{handler(css ?? children ?? '')}</style>;
-}
+export const Style = ({css, children, ...props}: StyleProps) =>
+    <style {...props}>{handler(css ?? children ?? '')}</style>
