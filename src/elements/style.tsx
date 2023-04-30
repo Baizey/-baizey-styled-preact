@@ -1,8 +1,9 @@
 import * as React from "preact/compat";
 import {StyleProps} from "../core";
-import postcss from "postcss-js";
-import autoprefixer = require("autoprefixer");
+import {compile, middleware, prefixer, serialize, stringify} from 'stylis'
 
-const handler = postcss.sync([autoprefixer])
-export const Style = ({css, children, ...props}: StyleProps) =>
-    <style {...props}>{handler(css ?? children ?? '')}</style>
+export const Style = ({css, children, ...props}: StyleProps) => {
+    const input = css ?? children?.toString() ?? ""
+    const output = serialize(compile(input), middleware([prefixer, stringify]))
+    return <style {...props}>{output}</style>;
+}
