@@ -1,6 +1,7 @@
 import {classname, HeaderProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
+import {Style} from "./style";
 
 export function Header1({
                             children,
@@ -11,7 +12,7 @@ export function Header1({
     const name = classname();
     return <h1 {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}/>
     </h1>;
 }
 
@@ -24,7 +25,7 @@ export function Header2({
     const name = classname();
     return <h2 {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}/>
     </h2>;
 }
 
@@ -37,6 +38,6 @@ export const Header3 = ({
     const name = classname();
     return <h3 {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.header))}/>
     </h3>;
 }

@@ -1,6 +1,7 @@
 import {classname, mergeStyling, SpanProps, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
+import {Style} from "./style";
 
 export function Span({
                          children,
@@ -11,6 +12,6 @@ export function Span({
     const name = classname();
     return <span {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.span))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.span))}/>
     </span>;
 }

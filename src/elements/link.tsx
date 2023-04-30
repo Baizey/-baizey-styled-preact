@@ -1,6 +1,7 @@
 import {classname, LinkProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
+import {Style} from "./style";
 
 export function Link({
                          children,
@@ -11,6 +12,6 @@ export function Link({
     const name = classname();
     return <a {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.link))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.link))}/>
     </a>;
 }

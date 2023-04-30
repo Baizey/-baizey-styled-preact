@@ -1,6 +1,7 @@
 import {classname, ListItemProps, ListProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
+import {Style} from "./style";
 
 export function List({
                          children,
@@ -11,7 +12,7 @@ export function List({
     const name = classname();
     return <ul {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.list))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.list))}/>
     </ul>;
 }
 
@@ -24,6 +25,6 @@ export function ListItem({
     const name = classname()
     return <li {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.listItem))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.listItem))}/>
     </li>;
 }

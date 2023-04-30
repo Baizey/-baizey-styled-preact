@@ -17,3 +17,4 @@ export type OptionProps = ElementProps & HTMLAttributes<HTMLOptionElement>
 export type HeaderProps = ElementProps & HTMLAttributes<HTMLHeadingElement>
 export type ListProps = ElementProps & HTMLAttributes<HTMLUListElement>
 export type ListItemProps = ElementProps & HTMLAttributes<HTMLLIElement>
+export type StyleProps = { css?: string } & HTMLAttributes<HTMLStyleElement>

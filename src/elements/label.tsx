@@ -1,6 +1,7 @@
 import {classname, LabelProps, mergeStyling, wrapCssInClass} from "../core";
 import * as React from "preact/compat";
 import {StyledTheme} from "../theme";
+import {Style} from "./style";
 
 export function Label({
                           children,
@@ -11,6 +12,6 @@ export function Label({
     const name = classname();
     return <label {...props} className={`${name}`}>
         {children}
-        <style>{wrapCssInClass(name, mergeStyling(styling, StyledTheme.label))}</style>
+        <Style css={wrapCssInClass(name, mergeStyling(styling, StyledTheme.label))}/>
     </label>;
 }
