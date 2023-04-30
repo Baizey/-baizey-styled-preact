@@ -15,8 +15,10 @@
     "build": "tsc --build",
     "test": "jest --coverage"
   },
+  "dependencies": {
+    "stylis": "^4.1.4"
+  },
   "devDependencies": {
-    "stylis": "^4.1.4",
     "@types/node": "^18.16.3",
     "@types/uuid": "^9.0.1",
     "@types/jest": "^29.5.1",
